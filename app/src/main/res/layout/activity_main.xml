@@ -10,15 +10,91 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
         android:foreground="@color/white"
+        android:scaleType="fitXY"
         android:src="@drawable/page_image" />
 
-    <com.example.scanninganimation.ScanningView
-        android:id="@+id/view"
+<!--    <com.example.scanninganimation.ScanningView-->
+<!--        android:id="@+id/view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="100dp"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipSpacingHorizontal="12dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+
+                android:text="Questions"
+                android:textSize="13sp"
+                app:chipEndPadding="16dp"
+                app:chipIcon="@drawable/ic_question"
+                app:chipIconEnabled="true"
+                app:chipStartPadding="16dp" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:text="Practice"
+                android:textSize="13sp"
+                app:chipMinHeight="48dp"
+                app:chipCornerRadius="12dp"
+                app:chipEndPadding="16dp"
+                app:chipIcon="@drawable/ic_practice"
+                app:chipIconEnabled="true"
+                app:chipStartPadding="16dp" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:text="Test"
+                android:textSize="13sp"
+                app:chipIcon="@drawable/ic_test"
+                app:chipIconEnabled="true" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:text="Videos"
+                android:textSize="13sp"
+                app:chipIcon="@drawable/ic_video"
+                app:chipIconEnabled="true" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:text="Journey"
+                android:textSize="13sp"
+                app:chipIcon="@drawable/ic_journey"
+                app:chipIconEnabled="true" />
+
+        </com.google.android.material.chip.ChipGroup>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
